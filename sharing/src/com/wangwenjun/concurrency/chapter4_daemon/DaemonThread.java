@@ -1,4 +1,4 @@
-package com.wangwenjun.concurrency.chapter4;
+package com.wangwenjun.concurrency.chapter4_daemon;
 
 /**
  * 守护线程

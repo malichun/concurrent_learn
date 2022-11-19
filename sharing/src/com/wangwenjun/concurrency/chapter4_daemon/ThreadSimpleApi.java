@@ -1,8 +1,9 @@
-package com.wangwenjun.concurrency.chapter4;
+package com.wangwenjun.concurrency.chapter4_daemon;
 
 import java.util.Optional;
 
 /**
+ * 获取线程名称
  * @author malichun
  * @create 2022/11/19 0019 12:53
  */
