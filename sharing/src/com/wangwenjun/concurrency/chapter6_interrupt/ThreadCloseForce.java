@@ -1,4 +1,4 @@
-package com.wangwenjun.concurrency.chapter6;
+package com.wangwenjun.concurrency.chapter6_interrupt;
 
 /**
  * 在while里面, 一步很长时间, 需要强制关闭

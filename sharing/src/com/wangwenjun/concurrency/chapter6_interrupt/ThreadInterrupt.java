@@ -1,4 +1,4 @@
-package com.wangwenjun.concurrency.chapter6;
+package com.wangwenjun.concurrency.chapter6_interrupt;
 
 /**
  * 打断
