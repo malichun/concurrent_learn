@@ -1,4 +1,4 @@
-package com.wangwenjun.concurrency.chapter9;
+package com.wangwenjun.concurrency.chapter9_producerconsumer;
 
 /**
  * 生产者消费者

@@ -1,4 +1,4 @@
-package com.wangwenjun.concurrency.chapter8;
+package com.wangwenjun.concurrency.chapter8_deadlock;
 
 /**
  * @author malc
