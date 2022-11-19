@@ -15,13 +15,13 @@ public class BlockTest {
             .forEach(name -> {
                 new Thread(() -> {
                     try {
-                        booleanLock.lock(10L);
+                        booleanLock.lock(1000); // 使用锁超时
                         Optional.of(Thread.currentThread().getName()+"抢到了锁").ifPresent(System.out::println);
                         work();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     } catch (Lock.TimeOutException e) {
-                        e.printStackTrace();
+                        //e.printStackTrace();
                         Optional.of(Thread.currentThread().getName()+" time out").ifPresent(System.out::println);
                     } finally {
                         booleanLock.unlock();
@@ -33,6 +33,6 @@ public class BlockTest {
 
     private static void work() throws InterruptedException {
         Optional.of(Thread.currentThread().getName()+" is working...").ifPresent(System.out::println);
-        Thread.sleep(10000);
+        Thread.sleep(40000);
     }
 }

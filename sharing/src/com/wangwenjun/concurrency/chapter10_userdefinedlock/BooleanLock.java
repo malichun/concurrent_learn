@@ -41,14 +41,14 @@ public class BooleanLock implements Lock{
         }
         long hasRemaining = mills;
         long endTime = System.currentTimeMillis() + mills;
-        while(initValue){
+        while(initValue){ // 开始为false
             if(hasRemaining<=0){
                 // 超时了
                 throw new TimeOutException("超时了...");
             }
             blockedThreadCollection.add(Thread.currentThread());
-            this.wait(mills);
-            hasRemaining = System.currentTimeMillis() - endTime;
+            this.wait(mills); // 其他线程到这儿后就会等着, 释放锁
+            hasRemaining = endTime -  System.currentTimeMillis();
         }
         //抢到锁了
         this.initValue = true;
@@ -59,7 +59,7 @@ public class BooleanLock implements Lock{
     public synchronized void unlock() {
         if(currentThread == Thread.currentThread()) {
             this.initValue = false;
-            System.out.println(Thread.currentThread() + " 释放了lock monitor ");
+            System.out.println(Thread.currentThread().getName() + " 释放了lock monitor ");
             this.notifyAll();
         }
     }

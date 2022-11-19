@@ -26,7 +26,7 @@ public class SynchronizedProblem {
         t2.start();
         Thread.sleep(2000);
         t2.interrupt();
-        System.out.println(t2.isInterrupted());
+        System.out.println(t2.isInterrupted()); // 就算打断线程原线程还是会执行的
     }
 
     private synchronized static void run(){
