@@ -1,4 +1,4 @@
-package com.wangwenjun.concurrent.chapter1;
+package com.wangwenjun.concurrent.chapter1_singleton;
 
 /**
  * 使用枚举

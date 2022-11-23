@@ -1,4 +1,4 @@
-package com.wangwenjun.concurrent.chapter1;
+package com.wangwenjun.concurrent.chapter1_singleton;
 
 /**
  * DoubleCheckedLock DCL
