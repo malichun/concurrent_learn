@@ -24,7 +24,6 @@ public class ReadWriteLock {
     }
     //////////////////////////////////
     // 读锁
-
     public synchronized void readLock() throws InterruptedException {
         this.waitingReaders++;
         try {
