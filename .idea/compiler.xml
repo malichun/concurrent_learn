@@ -9,9 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="design_pattern" />
         <module name="heima" />
+        <module name="classLoader" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="classLoader" target="1.8" />
       <module name="design_pattern" target="1.8" />
       <module name="heima" target="1.8" />
     </bytecodeTargetLevel>

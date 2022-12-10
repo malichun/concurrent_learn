@@ -1,5 +1,18 @@
-package com.wangwenjun.concurrent.chapter18_active_objects;/**
- * @author malichun
- * @create 2022/12/06 0006 12:51
- */public class MethodRequest {
+package com.wangwenjun.concurrent.chapter18_active_objects;
+
+/**
+ * 对应ActiveObject的每一个方法
+ */
+public abstract class MethodRequest {
+
+    protected final Servant servant;
+
+    protected final FutureResult futureResult;
+
+    public MethodRequest(Servant servant, FutureResult futureResult) {
+        this.servant = servant;
+        this.futureResult = futureResult;
+    }
+
+    public abstract void execute();
 }

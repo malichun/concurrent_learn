@@ -1,4 +1,6 @@
-package com.wangwenjun.concurrent.chapter18_active_objects;
+package com.wangwenjun.concurrent.chapter18_active_objects.client;
+
+import com.wangwenjun.concurrent.chapter18_active_objects.ActiveObject;
 
 /**
  * @author malichun

@@ -1,5 +1,21 @@
-package com.wangwenjun.concurrent.chapter18_active_objects;/**
- * @author malichun
- * @create 2022/12/07 0007 20:37
- */public class MakeStringRequest {
+package com.wangwenjun.concurrent.chapter18_active_objects;
+
+/**
+ * {@link ActiveObject#makeString(int, char)}
+ */
+public class MakeStringRequest extends MethodRequest{
+    private final int count;
+    private final char fillChar;
+
+    public MakeStringRequest(Servant servant, FutureResult futureResult, int count, char fillChar) {
+        super(servant, futureResult);
+        this.fillChar = fillChar;
+        this.count = count;
+    }
+
+    @Override
+    public void execute() {
+        Result result = servant.makeString(count, fillChar);
+        futureResult.setResult(result);
+    }
 }
