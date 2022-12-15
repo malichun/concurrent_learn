@@ -7,15 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="design_pattern" />
         <module name="heima" />
+        <module name="jucexample" />
         <module name="classLoader" />
+        <module name="design_pattern" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="classLoader" target="1.8" />
       <module name="design_pattern" target="1.8" />
       <module name="heima" target="1.8" />
+      <module name="jucexample" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
